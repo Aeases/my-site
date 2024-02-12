@@ -1,0 +1,197 @@
+/*
+  The CSS in this style tag is based off of Bear Blog's default CSS.
+  https://github.com/HermanMartinus/bearblog/blob/297026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/blog/default.css
+  License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
+ */
+
+:root {
+  --accent: #2337ff;
+  --accent-dark: #000d8a;
+  --black: 15, 18, 25;
+  --gray: 96, 115, 159;
+  --gray-light: 238, 238, 238;
+  --gray-dark: 34, 41, 57;
+  --box-shadow: inset 0 0 0.5px 1px hsla(0, 0%, 100%, 0.1), /* 2. shadow ring 👇 */ 0 0 0 1px hsla(230, 13%, 9%, 0.075), /* 3. multiple soft shadows 👇 */ 0 0.3px 0.4px hsla(230, 13%, 9%, 0.02), 0 0.9px 1.5px hsla(230, 13%, 9%, 0.045), 0 3.5px 6px hsla(230, 13%, 9%, 0.09);
+  --radius-univ: 9px;
+  --radius-card: 13px;
+  --card-divider-color: var(--flexoki-900);
+  --border-card: 1px solid var(--card-divider-color);
+}
+@font-face {
+  font-family: "Atkinson";
+  src: url("/fonts/atkinson-regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Atkinson";
+  src: url("/fonts/atkinson-bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Recoleta";
+  src: url("/fonts/recoleta-regular.woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "SourceCodePro";
+  src: url("/fonts/SourceCodePro-Regular.ttf");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+body {
+  font-family: "Atkinson", sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  background: var(--color-bg-primary);
+  background-size: 100% 600px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  color: var(--color-tx-normal);
+  font-size: 20px;
+  line-height: 1.7;
+}
+main {
+  width: 720px;
+  min-height: 100vh;
+  max-width: calc(100% - 2em);
+  /*margin: auto;*/
+  padding: 3em 1em;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 0.5rem 0;
+  color: rgb(var(--color-pu));
+  line-height: 1.2;
+}
+h1 {
+  font-size: 3.052em;
+}
+h2 {
+  font-size: 2.441em;
+}
+h3 {
+  font-size: 1.953em;
+}
+h4 {
+  /*   font-size: 1.563em; */
+  font-size: 56px;
+}
+h5 {
+  font-size: 1.25em;
+}
+strong,
+b {
+  font-weight: 700;
+}
+/* a {
+  color: var(--color-bl);
+} */
+/* a:hover {
+  color: var(--color-bl-hover);
+} */
+/* p {
+  margin-bottom: 1em;
+} */
+textarea {
+  width: 100%;
+  font-size: 16px;
+}
+input {
+  font-size: 16px;
+}
+table {
+  width: 100%;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius-univ);
+}
+code {
+  padding: 2px 5px;
+  background-color: var(--color-bg-secondary);
+  border-radius: 2px;
+}
+pre {
+  padding: 1.5em;
+  border-radius: var(--radius-univ);
+}
+pre > code {
+  all: unset;
+}
+blockquote {
+  border-left: 4px solid var(--accent);
+  padding: 0 0 0 20px;
+  margin: 0px;
+  font-size: 1.333em;
+}
+hr {
+  border: none;
+  border-top: 1px solid rgb(var(--gray-light));
+}
+@media (max-width: 720px) {
+  body {
+    font-size: 18px;
+  }
+  main {
+    padding: 1em;
+  }
+}
+
+.sr-only {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  /* IE6, IE7 - a 0 height clip, off to the bottom right of the visible 1px box */
+  clip: rect(1px 1px 1px 1px);
+  /* maybe deprecated but we need to support legacy browsers */
+  clip: rect(1px, 1px, 1px, 1px);
+  /* modern browsers, clip-path works inwards from each corner */
+  clip-path: inset(50%);
+  /* added line to stop words getting smushed together (as they go onto seperate lines and some screen readers do not understand line feeds as a space */
+  white-space: nowrap;
+}
+
+@media (max-width: 750px) {
+  hr.hr-style {
+    display: none !important;
+  }
+  hr.hr-style:before {
+    display: none !important;
+  }
+}
+hr.hr-style {
+  overflow: visible; /* For IE */
+  height: 30px;
+  border-style: solid;
+  border-color: var(--color-tx-muted);
+  border-width: 1px 0 0 0;
+  border-radius: 20px;
+}
+hr.hr-style:before {
+  /* Not really supposed to work, but does */
+  display: block;
+  content: "";
+  height: 30px;
+  margin-top: -31px;
+  border-style: solid;
+  border-color: var(--color-tx-normal);
+  border-width: 0 0 1px 0;
+  border-radius: 20px;
+}
