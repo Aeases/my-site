@@ -33,19 +33,28 @@ import LoginButton from '@/components/auth/authenticate';
 >
 
 <h3>
-My life expectancy
+Where I'm at
 </h3>
 <p>
-Each dot represents a week
+Each one's a week
 </p>
-<div class="full-width">
+<div class="">
 	<SvgGraph client:only="react" />
 </div>
+<p>
+Fyi, the Average life expectancy here in Australia is 81 :)
+</p>
+<hr>
+<br>
+<h5>
+	Random tests
+</h5>
 <p>svgs are cool, heres a black square thats actually an svg that responds to this slider</p>
 <div class="broider">
-	<Test client:only="react" />
+	<Test client:load />
 </div>
-<div>
+<p>these two buttons are to test a webauthN implementation (<i>written in rust</i>), set it up on localhost, might deploy it at some point, they do nothing now though</p>
+<div class="grid gap-3">
 	<WebAuthTest client:only="react"/>
 	<LoginButton client:only="react"/>
 </div>

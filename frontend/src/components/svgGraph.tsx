@@ -49,19 +49,37 @@ export default function SvgGraph() {
   )
 }
 
-
-
-type svgDotProps = {
-  x: number,
-  y: number
-}
-
-
 const svgDot = (x: number, y: number, occured: boolean|undefined) => {
   if (occured) { // UnOccured Weeks
     return (<circle r="0.7" cx={String(x)} cy={String(y)} stroke="#879A39" fill="#879A39" strokeWidth="0.3"/>)          
   } else if (occured == undefined) { // The Current Week
-    return (<motion.circle r="0.7" cx={String(x)} id="use" cy={String(y)} stroke="#cecdc3" fill="#1c1b1a"  strokeWidth="0.25"/>)          
+    let t = [1, 0.2, 0.5, 0.2]
+    let s = [1, 1.4, 1]
+    return (
+      <g>
+
+        <motion.circle r="0.8" cx={String(x)} cy={String(y)} stroke="#879A39" fill="#879A39"  strokeWidth="0.25" animate={{
+          scale: [0.9, 1.4, 0.9]
+        }}
+        transition={{
+            duration: 1,
+            ease: "easeIn",
+            repeat: Infinity,
+            repeatDelay: 1.15,
+            type: "just",
+            damping: 5,
+        }}
+        />
+        <motion.circle r="0.7" cx={String(x)} cy={String(y)} stroke="#66800B" fill="#66800B"  strokeWidth="0.25" animate={{scale: [1, 0.9, 1.15, 1]}} transition={{
+          duration: 1,
+          repeatDelay: 1.15,
+          repeatType: "reverse",
+          ease: "backIn",
+          repeat: Infinity,
+        }}/>
+        {/*<circle r="0.7" cx={String(x)} cy={String(y)} stroke="#cecdc3" fill="#1c1b1a"  strokeWidth="0.25"/>*/}
+      </g>
+    )
   } else if (!occured) { // Occurred Weeks
     return (<circle r="0.7" cx={String(x)} cy={String(y)} stroke="#878580" fill="#87858" strokeWidth="0.3"/>)          
   }
