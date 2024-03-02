@@ -17,6 +17,7 @@
     "@astrojs/sitemap": "^3.0.5",
     "@astrojs/tailwind": "^5.1.0",
     "@astrojs/vercel": "^6.1.4",
+    "@excalidraw/utils": "^0.1.2",
     "@nextui-org/react": "^2.2.9",
     "@radix-ui/react-accordion": "^1.1.2",
     "@radix-ui/react-alert-dialog": "^1.0.5",
@@ -36,12 +37,15 @@
     "@types/react": "^18.2.55",
     "@types/react-dom": "^18.2.19",
     "astro": "^4.3.5",
+    "canvas-5-polyfill": "^0.1.5",
+    "canvas": "^2.11.2",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
     "cmdk": "^0.2.1",
     "d3-shape": "^3.2.0",
     "date-fns": "^2.30.0",
     "framer-motion": "^10.18.0",
+    "jsdom": "^24.0.0",
     "lucide-react": "^0.294.0",
     "radix-ui": "^1.0.1",
     "react": "^18.2.0",
@@ -54,6 +58,9 @@
     "typescript": "^5.3.3"
   },
   "devDependencies": {
+    "jest": "^29.5.0",
+    "prettier": "^3.2.5",
+    "prettier-plugin-astro": "^0.13.0",
     "vite-plugin-mkcert": "^1.17.3"
   }
 }

@@ -5,7 +5,7 @@ import react from "@astrojs/react"
 import tailwind from "@astrojs/tailwind"
 import mkcert from "vite-plugin-mkcert";
 import vercel from "@astrojs/vercel/serverless"
-
+//import wikiLinkPlugin, { getPermalinks } from "@portaljs/remark-wiki-link"
 // https://astro.build/config
 export default defineConfig({
   site: "https://example.com",
@@ -20,6 +20,6 @@ export default defineConfig({
   output: "hybrid",
   adapter: vercel(),
   vite: {
-    plugins: [mkcert()]
+    plugins: [/* mkcert() */]
   }
 })
