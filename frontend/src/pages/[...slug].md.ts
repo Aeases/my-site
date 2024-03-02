@@ -70,7 +70,7 @@ export const decompress = (data: string): string => {
 
 const getDecompressedScene = (
   data: string,
-): [string, IteratorResult<RegExpMatchArray, any>] => {
+): [string | null, IteratorResult<RegExpMatchArray, any>] => {
   let res = data.matchAll(DRAWING_COMPRESSED_REG);
 
   //In case the user adds a text element with the contents "# Drawing\n"

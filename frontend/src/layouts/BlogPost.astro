@@ -44,7 +44,7 @@ if (tags) {
 	) : (
 	<html lang="en">
 		<head>
-			<BaseHead title={title} description={description} />
+			<BaseHead title={title || ""} description={description || ""} />
 		</head>
 
 		<body class="theme-dark">
@@ -62,7 +62,7 @@ if (tags) {
 							</div>
 							
 							<div class="date">
-								<FormattedDate date={pubDate} />
+								<FormattedDate date={pubDate!} />
 								{
 									updatedDate && (
 										<div class="last-updated-on">
