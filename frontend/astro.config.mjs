@@ -17,7 +17,7 @@ export default defineConfig({
       applyBaseStyles: true,
     }),
   ],
-  output: "hybrid",
+  output: "static",
   adapter: vercel(),
   vite: {
     plugins: [mkcert()]
