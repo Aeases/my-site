@@ -1,1 +1,2 @@
-# My web(sight)
+# Personal Website
+Frontend using [Astro](https://astro.build).
