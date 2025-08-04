@@ -1,15 +1,18 @@
 ---
-title: "Automatic Disk Decryption on Immutable Fedora"
-description: ""
+title: "LVM but automatic"
+description: "How to automatically decrypt an encryped disk when booting on Immutable Fedora"
 pubDate: "April 3 2024"
-heroImage: "/lvmdrawing.png"
+heroImage: "../images/lvmdrawing.png"
 ---
 
 >[!error] Verify all this yourself, I'm a novice.
 >
 >At the very least, following these steps will make you make you susceptible to [cold boot attacks](https://wiki.archlinux.org/title/Trusted_Platform_Module#Data-at-rest_encryption_with_LUKS). I can't be 100% sure these commands don't increase your attack surface further in ways I don't understand.
 
-### The commands to run.
+<br>
+
+# The commands to run.
+
 Most of this is derived from a [guide](https://community.frame.work/t/guide-setup-tpm2-autodecrypt/39005) on the framework Outlet. It was not meant for Immutable fedora, and so i've made my own.
 
 
@@ -40,7 +43,7 @@ rpm-ostree initramfs-etc --force-sync
 ```
 
 
-
+<br>
 
 >[!cite] References
 >

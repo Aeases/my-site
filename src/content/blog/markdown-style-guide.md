@@ -2,7 +2,7 @@
 title: "Markdown Style Guide"
 description: "'what is a markdown?'"
 pubDate: "Feb 03 2024"
-heroImage: "/markdownsyntax.excalidraw.svg"
+heroImage: "../images/markdownsyntax.excalidraw.svg"
 ---
 >**(This is a test document)**
 # Headings

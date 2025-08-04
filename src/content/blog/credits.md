@@ -2,7 +2,7 @@
 title: "Credits & Inspirations"
 description: ""
 pubDate: "Feb 2 2024"
-heroImage: "/creditsCover.svg"
+heroImage: "../images/creditsCover.svg"
 ---
 
 ##### [Not A Number](https://www.nan.fyi/)

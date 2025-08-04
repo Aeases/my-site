@@ -4,6 +4,7 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import FormattedDate from '../components/FormattedDate.astro';
+import { Image } from 'astro:assets';
 
 type Props = CollectionEntry<'blog'>['data'];
 
@@ -86,6 +87,10 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 
             blockquote[data-callout="cite"][data-callout="cite"] {
               --callout-color: 158, 158, 158;
+            }
+
+            blockquote[data-callout="info"][data-callout="info"] {
+              --callout-color: 67, 133, 190;
             }
 
             [data-expanded="false"] .callout-content {
@@ -182,7 +187,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
                 color: inherit;
                 font-weight: inherit;
                 font-size: 3rem;
-                font-family: 'Recoleta';
+                font-family: 'Recoleta', 'Noto Serif JP';
                 }
             }
             .date {
@@ -201,7 +206,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
             <article>
                 <div class="prose">
                     <div class="hero-image">
-                        {heroImage && <img width={1020} height={510} src={heroImage} alt="" />}
+                        {heroImage && <Image width={1020} height={510} src={heroImage} alt="" />}
                     </div>
                     <div class="title">
                         <h1>{title}</h1>

@@ -4,7 +4,7 @@ import Test from '@/components/svgLine';
 import SvgGraph from '@/components/svgGraph';
 import WebAuthTest from '@/components/auth/startReg'
 import LoginButton from '@/components/auth/authenticate';
-
+import hero from '../content/images/blog-about.jpg';
 
 ---
 <style>
@@ -29,16 +29,16 @@ import LoginButton from '@/components/auth/authenticate';
 	title="About Me"
 	description=""
 	pubDate={new Date('Jul 26 2025')}
-	heroImage="/blog-about.jpg"
+	heroImage={hero}
 >
-I'm Zane, this is my website, I might "post" stuff here sometimes. :)
+	I'm Zane, at the moment I'm a student at Curtin University studying the Bachelour of Computing in Computer Science. I may put some things I'm interested in here.
 <br>
 <br>
 <h3>
 A lil' graphic
 </h3>
 <p>
-Each dot represents a week.
+Each dot represents a week. It goes on for ~80 years.
 </p>
 <div class="">
 	<SvgGraph client:only="react" />

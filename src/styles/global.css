@@ -11,7 +11,7 @@
   --gray: 96, 115, 159;
   --gray-light: 238, 238, 238;
   --gray-dark: 34, 41, 57;
-  --callout-title-weight: 600;
+  --callout-title-weight: 700;
   --text-normal: var(--flexoki-200);
   --box-shadow: inset 0 0 0.5px 1px hsla(0, 0%, 100%, 0.1), /* 2. shadow ring 👇 */ 0 0 0 1px hsla(230, 13%, 9%, 0.075), /* 3. multiple soft shadows 👇 */ 0 0.3px 0.4px hsla(230, 13%, 9%, 0.02), 0 0.9px 1.5px hsla(230, 13%, 9%, 0.045), 0 3.5px 6px hsla(230, 13%, 9%, 0.09);
   --radius-univ: 9px;
