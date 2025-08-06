@@ -42,45 +42,23 @@ export default function SvgGraph() {
   return(
     <svg viewBox="-2 -2.5 108 216">
       {
-        years.map((y) => y.weeks.map((w) => svgDot(w.coards[0], w.coards[1], w.occured)))
+        years.map((y) => 
+          y.weeks.map((w) => 
+            svgDot(w.coards[0], w.coards[1], w.occured, `${w.coards[0]}-${w.coards[1]}`)
+          )
+        )
       }
-      <use href="use"/>
     </svg>
   )
 }
 
-const svgDot = (x: number, y: number, occured: boolean|undefined) => {
+const svgDot = (x: number, y: number, occured: boolean|undefined, key: string) => {
+  console.log(key)
   if (occured) { // UnOccured Weeks
-    return (<circle r="0.7" cx={String(x)} cy={String(y)} stroke="#879A39" fill="#879A39" strokeWidth="0.3"/>)          
+    return (<circle key={key} r="0.7" cx={String(x)} cy={String(y)} stroke="#879A39" fill="#879A39" strokeWidth="0.3"/>)          
   } else if (occured == undefined) { // The Current Week
-    let t = [1, 0.2, 0.5, 0.2]
-    let s = [1, 1.4, 1]
-    return (
-      <g>
-
-        <motion.circle r="0.8" cx={String(x)} cy={String(y)} stroke="#879A39" fill="#879A39"  strokeWidth="0.25" animate={{
-          scale: [0.9, 1.4, 0.9]
-        }}
-        transition={{
-            duration: 1,
-            ease: "easeIn",
-            repeat: Infinity,
-            repeatDelay: 1.15,
-            type: "just",
-            damping: 5,
-        }}
-        />
-        <motion.circle r="0.7" cx={String(x)} cy={String(y)} stroke="#66800B" fill="#66800B"  strokeWidth="0.25" animate={{scale: [1, 0.9, 1.15, 1]}} transition={{
-          duration: 1,
-          repeatDelay: 1.15,
-          repeatType: "reverse",
-          ease: "backIn",
-          repeat: Infinity,
-        }}/>
-        {/*<circle r="0.7" cx={String(x)} cy={String(y)} stroke="#cecdc3" fill="#1c1b1a"  strokeWidth="0.25"/>*/}
-      </g>
-    )
+    return (<circle key={key} r="0.7" cx={String(x)} cy={String(y)} stroke="#AD8301" fill="#D0A215" strokeWidth="0.3"/>)          
   } else if (!occured) { // Occurred Weeks
-    return (<circle r="0.7" cx={String(x)} cy={String(y)} stroke="#878580" fill="#87858" strokeWidth="0.3"/>)          
+    return (<circle key={key} r="0.7" cx={String(x)} cy={String(y)} stroke="#878580" fill="#87858" strokeWidth="0.3"/>)          
   }
 }
