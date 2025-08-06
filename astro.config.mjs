@@ -4,13 +4,13 @@ import sitemap from "@astrojs/sitemap"
 import react from "@astrojs/react"
 import tailwind from "@astrojs/tailwind"
 import mkcert from "vite-plugin-mkcert";
-import vercel from "@astrojs/vercel/serverless"
+import vercel from "@astrojs/vercel"
 import remarkBreaks from "remark-breaks"
 import remarkObsidianCallout from "remark-obsidian-callout";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://example.com",
+  site: "https://zanefitzgerald.com",
   markdown: {remarkPlugins: [remarkBreaks, remarkObsidianCallout]},
   integrations: [
     mdx(),
