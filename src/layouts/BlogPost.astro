@@ -60,61 +60,69 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
                 font-size: calc(1.1875rem);
                 margin: auto;
                 padding: 1em;
-                color: rgb(var(--color-tx-normal-rgb));
+                color: var(--color-tx-normal);
                 font-family: -apple-system, BlinkMacSystemFont, "Inter", "IBM Plex Sans", Segoe UI, Helvetica, Arial, sans-serif;
 
-            blockquote[data-callout] {
-                padding: 12px 12px 12px 24px;
-                border-radius: 4px;
-                
-                background-color: rgba(var(--callout-color), 0.1);
-                  & > *:is(p, div):not(.callout-title) {
-                    /* font-style: unset; */
-                    margin-block-start: 1rem;
-                    margin-block-end: 1rem;
-                  }
+                a {
+                    text-decoration: underline;
+                }
 
-                  & > p {
-                    color: var(--color-tx-normal);
-                  }
+                a:hover {
+                    color: var(--color-bl);
+                }
 
-                  & > .callout-title {
-                    vertical-align: middle;
-                    align-items: center;
-                    padding: 0;
-                    display: flex;
-                    gap: 4px;
-                    color: rgb(var(--callout-color));
-                    font-weight: var(--callout-title-weight);
-                    line-height: 1.3;
-                  }
-            }
+                blockquote[data-callout] {
+                    padding: 12px 12px 12px 24px;
+                    border-radius: 4px;
 
-            blockquote[data-callout="error"][data-callout="error"] {
-              --callout-color: var(--flexoki-red-400-rgb);
-            }
+                    background-color: rgba(var(--callout-color), 0.1);
+                    & > *:is(p, div):not(.callout-title) {
+                        /* font-style: unset; */
+                        margin-block-start: 1rem;
+                        margin-block-end: 1rem;
+                    }
 
-            blockquote[data-callout="cite"][data-callout="cite"] {
-              --callout-color: 158, 158, 158;
-            }
+                    & > p {
+                        color: var(--color-tx-normal);
+                    }
 
-            blockquote[data-callout="info"][data-callout="info"] {
-              --callout-color: 67, 133, 190;
-            }
+                    & > .callout-title {
+                        vertical-align: middle;
+                        align-items: center;
+                        padding: 0;
+                        display: flex;
+                        gap: 4px;
+                        color: rgb(var(--callout-color));
+                        font-weight: var(--callout-title-weight);
+                        line-height: 1.3;
+                    }
+                }
 
-            [data-expanded="false"] .callout-content {
-              max-height: 0;
-              overflow: hidden;
-              transition: max-height 0.2s ease-out;
-            }
+                blockquote[data-callout="error"][data-callout="error"] {
+                    --callout-color: var(--flexoki-red-400-rgb);
+                }
 
-            [data-expanded="true"] .callout-content {
-              max-height: 100px; /* or whatever height needed */
-            }
+                blockquote[data-callout="cite"][data-callout="cite"] {
+                    --callout-color: 158, 158, 158;
+                }
 
-            [data-expandable="true"] .callout-title {
-              cursor: pointer;
-            }
+                blockquote[data-callout="info"][data-callout="info"] {
+                    --callout-color: 67, 133, 190;
+                }
+
+                [data-expanded="false"] .callout-content {
+                    max-height: 0;
+                    overflow: hidden;
+                    transition: max-height 0.2s ease-out;
+                }
+
+                [data-expanded="true"] .callout-content {
+                    max-height: 100px; /* or whatever height needed */
+                }
+
+                [data-expandable="true"] .callout-title {
+                    cursor: pointer;
+                }
 
 
                 hr {
