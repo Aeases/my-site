@@ -15,6 +15,7 @@
     "@astrojs/react": "^4.2.3",
     "@astrojs/rss": "^4.0.11",
     "@astrojs/sitemap": "^3.3.0",
+    "@astrojs/svelte": "^7.1.0",
     "@astrojs/tailwind": "^6.0.2",
     "@astrojs/vercel": "^8.0.4",
     "@nextui-org/react": "^2.6.11",
@@ -50,10 +51,11 @@
     "recharts": "^2.12.0",
     "remark-breaks": "^4.0.0",
     "remark-obsidian-callout": "^1.5.1",
+    "svelte": "^5.37.3",
     "tailwind-merge": "^2.2.1",
     "tailwindcss": "^3.4.1",
     "tailwindcss-animate": "^1.0.7",
-    "typescript": "^5.3.3"
+    "typescript": "^5.9.2"
   },
   "devDependencies": {
     "vite-plugin-mkcert": "^1.17.3"

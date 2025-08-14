@@ -3,6 +3,7 @@
   "compilerOptions": {
     "strictNullChecks": true,
     "jsx": "react-jsx",
+    "sourceMap": true,
     "jsxImportSource": "react",
     "baseUrl": ".",
     "paths": {
