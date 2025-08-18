@@ -61,6 +61,21 @@ The blockquote element represents content that is quoted from another source, op
 
 [^1]: The above quote is excerpted from Rob Pike's [talk](https://www.youtube.com/watch?v=PAAkCSZUG1c) during Gopherfest, November 18, 2015.
 
+## Dividers & Callouts
+
+Some text
+<hr> <br>
+
+some more text
+
+>[!info] This is a callout
+>
+>Do you feel called out?
+
+<br>
+
+
+
 ## Tables
 
 #### Syntax

@@ -18,6 +18,7 @@
   --radius-card: 13px;
   --card-divider-color: var(--flexoki-900);
   --border-card: 1px solid var(--card-divider-color);
+  --fancy-title-fonts: 'Recoleta', 'Noto Serif JP';
 }
 
 /* from obsidian */
@@ -161,10 +162,14 @@ pre {
 pre > code {
   all: unset;
 }
+
 hr {
   border: none;
-  border-top: 1px solid rgb(var(--gray-light));
+  border-top: 1px solid var(--color-ui-normal);
+  width: 100%;
 }
+
+
 @media (max-width: 720px) {
   body {
     font-size: 18px;

@@ -54,6 +54,35 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
                 margin: 0 auto;
                 border-radius: 12px;
             }
+
+
+            .title {
+                margin-bottom: 1em;
+                padding: 1em 0;
+                text-align: center;
+                line-height: 1;
+                color: var(--color-tx-normal);
+
+                .description, .date {
+                    font-family: 'SourceCodePro';
+                    margin-bottom: 0.75em;
+                }
+                .date {
+                    margin-bottom: 0.5em;
+                    color: var(--color-tx-muted)
+                }
+
+                .last-updated-on {
+                    font-style: italic;
+                }
+                h1 {
+                margin: 0 0 0.1em 0;
+                color: inherit;
+                font-weight: inherit;
+                font-size: 3rem;
+                font-family: var(--fancy-title-fonts);
+                }
+            }
             .prose {
                 width: 720px;
                 max-width: calc(100% - 2em);
@@ -125,9 +154,6 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
                 }
 
 
-                hr {
-                    border-color: var(--color-ui-normal);
-                }
 
                 ul>li {
                     padding: 0.15em, 0;
@@ -185,35 +211,6 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
             }
 
 
-            .title {
-                margin-bottom: 1em;
-                padding: 1em 0;
-                text-align: center;
-                line-height: 1;
-                color: var(--color-tx-normal);
-
-                .description, .date {
-                    font-family: 'SourceCodePro';
-                    margin-bottom: 0.75em;
-                }
-                .date {
-                    color: var(--color-tx-muted)
-                }
-                h1 {
-                margin: 0 0 0.1em 0;
-                color: inherit;
-                font-weight: inherit;
-                font-size: 3rem;
-                font-family: 'Recoleta', 'Noto Serif JP';
-                }
-            }
-            .date {
-                margin-bottom: 0.5em;
-                color: rgb(var(--color-tx-normal));
-            }
-            .last-updated-on {
-                font-style: italic;
-            }
         </style>
     </head>
 

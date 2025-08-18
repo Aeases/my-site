@@ -7,141 +7,119 @@ import FormattedDate from '../components/FormattedDate.astro';
 import { getCollection } from 'astro:content';
 import { Image } from 'astro:assets';
 
-const posts = (await getCollection('blog')).sort(
-	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+const projects = (await getCollection('projects')).sort(
+    (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body class="theme-dark">
-		<Header title={SITE_TITLE} />
-		<main class="layout-grid-container">
-			<div class="blogs">
-				<ul>
-					{
-						posts.filter(p => p.data.private !== true).map((post) => (
-							<li>	
-								<a href={`/${post.slug}/`} class="post-card">
-									<Image class="post-image" width={720} height={720} src={post.data.heroImage} alt="" />
-									<div class="post-textcontent">
-										<h4 class="title">{post.data.title}</h4>
-										<p class="date">
-											<FormattedDate date={post.data.pubDate} />
-										</p>
-									</div>
-								</a>
-							</li>
-								
-						))
-					}
-					
-				</ul>
-			</div>
-			<!-- <aside class="sidebar">
-a
-			</aside> -->
-		</main>
-		<Footer />
-	</body>
-	<style>
-.layout-grid-container {
-	display: grid;
-	width: 100%;
-}
-
-	.layout-grid-container {
-		grid-template-columns: 3fr;
-		grid-template-areas: 'blogs';
-		justify-items: center;
-	}
-.sidebar {
-	grid-area: sidebar;
-	background-color: red;
-	display: none;
-}
+    <head>
+        <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+        <style>
+        .layout-grid-container {
+            display: grid;
+            justify-items: center;
+        }
 
 
-@media (min-width: 1024px) {
-	.sidebar {
-		display: grid;
-	}
+        .blogs > p 
+
+        .post-card {
+            cursor: wait;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        ul:has(.post-card) {	
+            /*The ul should take up the whole parent, it has li's that are smaller inside. */
+            display: grid;
+            grid-template-columns: 1fr;
+            justify-content: space-around;
+            justify-items: center;
+            gap: 0.5em;
+        }
 
 
-	.layout-grid-container {	
-		grid-template-columns: 3fr 1fr;
-		grid-template-areas: 
-			'blogs sidebar';
-	}
-}
+        .post-card {
+            display: grid;
+            padding: 1rem;
+            /* 	background-color: var(--color-bg-secondary); */
+            grid-template-columns: 1fr 1fr;	
+            border-radius: var(--radius-card);
+            /* 	border: var(--border-card);
+border-style: dotted;	 */
+            gap: 0.5em 0.75em;
 
+            & .post-image {
+                grid-area: image;
+                object-fit: cover;
+                border-radius: var(--radius-univ);
+                aspect-ratio: 1/1;
+            }
+            & .post-textcontent {
+                grid-area: textcontent;
+                display: grid;
+                align-content: center;
+                color: inherit;
+                -webkit-font-smoothing: antialiased;
+                font-weight: 500;
+                .title {
+                    font-family: var(--fancy-title-fonts);
+                    font-size: 56px;
+                    line-height: 1.05em;
+                }
+                .date {
+                    font-family: 'SourceCodePro';
+                    color: var(--color-tx-muted);
+                }
 
+            }
+        }
 
-.blogs {
-	grid-area: blogs;
-	width: 80%;
-	/* background-color: red; */
-}
+        li {
+            &:nth-child(even) > .post-card {
+                grid-template-areas: 'textcontent image';
+                text-align: right;
+            }		
+            &:nth-child(odd) > .post-card {
+                grid-template-areas: 'image textcontent';
+                text-align: left;
+            }
+        }
+        </style>
+    </head>
+    <body class="theme-dark">
+        <Header title={SITE_TITLE} />
+        <main class="layout-grid-container">
+            gfdklfk
+            <hr>
+            <div class="updates">
+                <div>
+                    gdfgjkfjg
+                </div>
+            </div>
+            <hr>
+            <div class="projects">
+                <ul>
+                    {
+                    projects.filter(p => p.data.private !== true).map((prj) => (
+                    <li>	
+                        <a href={`/${prj.slug}/`} class="post-card">
+                            <Image class="post-image" width={720} height={720} src={prj.data.heroImage} alt="" />
+                            <div class="post-textcontent">
+                                <header class="title">{prj.data.title}</header>
+                                <p class="date">
+                                    <FormattedDate date={prj.data.pubDate} />
+                                </p>
+                            </div>
+                        </a>
+                    </li>
 
-.blogs > p 
+                    ))
+                    }
 
-.post-card {
-	cursor: wait;
-	margin-right: auto;
-	margin-left: auto;
-}
-	ul:has(.post-card) {	
-		/*The ul should take up the whole parent, it has li's that are smaller inside. */
-		display: grid;
-		grid-template-columns: 1fr;
-		justify-content: space-around;
-		justify-items: center;
-		gap: 0.5em;
-	}
-	
-
-.post-card {
-	display: grid;
-	padding: 1rem;
-/* 	background-color: var(--color-bg-secondary); */
-	grid-template-columns: 1fr 1fr;	
-	border-radius: var(--radius-card);
-/* 	border: var(--border-card);
-	border-style: dotted;	 */
-	gap: 0.5em 0.75em;
-
-	& .post-image {
-		grid-area: image;
-		object-fit: cover;
-		border-radius: var(--radius-univ);
-		aspect-ratio: 1/1;
-	}
-	& .post-textcontent {
-		grid-area: textcontent;
-		display: grid;
-		align-content: center;
-		color: inherit;
-		-webkit-font-smoothing: antialiased;
-		font-weight: 500;
-		
-	}
-}
-
-li {
-		&:nth-child(even) > .post-card {
-			grid-template-areas: 'textcontent image';
-			text-align: right;
-		}		
-		&:nth-child(odd) > .post-card {
-			grid-template-areas: 'image textcontent';
-			text-align: left;
-		}
-	}
-
-	
-
-	</style>
+                </ul>
+            </div>
+        </main>
+        <Footer />
 </html>
