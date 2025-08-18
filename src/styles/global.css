@@ -103,7 +103,9 @@ main {
     min-height: 100vh;
     max-width: calc(100% - 2em);
     margin: auto;
-    padding: 3em 1em;
+    padding: 0em 1em 3em;
+    /* ^^^ top, left&right, bottom */
+    font-size: calc(1.1875rem);
 }
 
 @media (max-width: 720px) {

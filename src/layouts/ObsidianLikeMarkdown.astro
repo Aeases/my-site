@@ -29,22 +29,6 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 
 
             
-            main {
-                width: calc(100vw - 2em);
-                max-width: 100vw;
-                margin: 0;
-                padding-top: 0;
-            }
-            .hero-image {
-                max-width: 50vw;
-                margin: 0 auto;
-            }
-            .hero-image img {
-                display: block;
-                max-height: 60vw;
-                margin: 0 auto;
-                border-radius: 12px;
-            }
 
 
             @media (max-width: 720px) {
@@ -53,12 +37,12 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
                     margin: 0;
                 }
                 .hero-image {
-                    max-width: 80vw;
-                    & img {
-                        max-height: unset;
-                    }
+                    /* max-width: 80vw; */
+                    /* & img { */
+                    /*     max-height: unset; */
+                    /* } */
                 }
-                article .prose{
+                .prose{
                     padding: 1em;
                     max-width: 100vw;
                 }
@@ -66,39 +50,39 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
             }
 
 
-            .title {
-                margin-bottom: 1em;
-                padding: 1em 0;
+            .page-preamble {
                 text-align: center;
                 line-height: 1;
-                color: var(--color-tx-normal);
-
-                .description, .date {
-                    font-family: 'SourceCodePro';
-                    margin-bottom: 0.75em;
-                }
-                .date {
-                    margin-bottom: 0.5em;
-                    color: var(--color-tx-muted)
-                }
-
-                .last-updated-on {
-                    font-style: italic;
-                }
-                h1 {
-                margin: 0 0 0.1em 0;
-                color: inherit;
-                font-weight: inherit;
+                display: grid;
+                padding: 1em 0;
+                margin-bottom: 1em;
+            }
+            .hero-image {
+                margin: 0em 5em;
+                object-fit: contain;
+                border-radius: 12px;
+            }
+            .title {
+                margin: 0 0 0.1em;
                 font-size: 3rem;
+                font-size: 3rem;
+                line-height: 1.2;
                 font-family: var(--fancy-title-fonts);
-                }
+            }
+            .description, .date {
+                font-family: 'SourceCodePro';
+                margin-bottom: 0.75em;
+            }
+            .date {
+                margin-bottom: 0.5em;
+                color: var(--color-tx-muted);
+                
+            }
+
+            .last-updated-on {
+                font-style: italic;
             }
             .prose {
-                width: 720px;
-                max-width: calc(100% - 2em);
-                font-size: calc(1.1875rem);
-                margin: auto;
-                padding: 1em;
                 color: var(--color-tx-normal);
                 font-family: -apple-system, BlinkMacSystemFont, "Inter", "IBM Plex Sans", Segoe UI, Helvetica, Arial, sans-serif;
 
@@ -179,7 +163,8 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
                     margin-bottom: 1.5rem;
                 }
 
-                blockquote {
+                /* Regular blockquotes */
+                blockquote:not([data-callout]) {
                     border-left: 1px solid var(--color-ui-normal);
                     padding: 0 0 0 20px;
                     margin: 0px;
@@ -228,29 +213,29 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
         <Header />
         <main>
             <article>
-                <div class="prose">
+
                     <div class="hero-image">
-                        {heroImage && <Image width={1020} height={1020} src={heroImage} alt="" />}
+                    {heroImage && <Image width={1020} height={1020} src={heroImage} alt="" />}
                     </div>
-                    <div class="title">
-                        <h1>{title}</h1>
-                        <div class="description">
-                            {description}
-                        </div>
+                <div class="page-preamble">
+                    <div class="title">{title}</div>
+                    {description && <div class="description">
+                        {description}
+                    </div>}
                         
-                        <div class="date">
-                            {pubDate && <FormattedDate date={pubDate} />}
-                            {
-                                updatedDate && (
-                                    <div class="last-updated-on">
-                                        Last updated on <FormattedDate date={updatedDate} />
-                                    </div>
-                                )
-                            }
-                        </div>
-                        <hr style="margin: 1.70em auto 0 auto; max-width: 95%;" />
-                
-                    </div>
+                    {pubDate && <div class="date">
+                        {pubDate && <FormattedDate date={pubDate} />}
+                        {
+                            updatedDate && (
+                                <div class="last-updated-on">
+                                    Last updated on <FormattedDate date={updatedDate} />
+                                </div>
+                            )
+                        }
+                    </div>}
+                    <hr style="margin: 1em auto 0em auto; max-width: 95%;" />
+                </div>
+                <div class="prose">
                     <slot />
                 </div>
             </article>
