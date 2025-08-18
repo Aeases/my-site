@@ -5,7 +5,7 @@ import { SITE_TITLE } from '../consts';
 
 <header>
 	<nav>
-		<h2><a href="/">{SITE_TITLE}</a></h2>
+		<h2 class="site-name"><a href="/">{SITE_TITLE}</a></h2>
 		<div class="internal-links">
 			<HeaderLink href="/">Updates</HeaderLink>
 			<HeaderLink href="/about">About</HeaderLink>
@@ -64,7 +64,8 @@ import { SITE_TITLE } from '../consts';
 		display: flex;
 	}
 	@media (max-width: 720px) {
-		.social-links {
+        .site-name,
+        .social-links {
 			display: none;
 		}
 	}

@@ -28,16 +28,6 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 
 
 
-            @media (max-width: 720px) {
-                main {
-                    padding: 0;
-                    margin: 0;
-                }
-                article .prose{
-                    padding: 1em;
-                    max-width: 100vw;
-                }
-            }
             
             main {
                 width: calc(100vw - 2em);
@@ -51,8 +41,28 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
             }
             .hero-image img {
                 display: block;
+                max-height: 60vw;
                 margin: 0 auto;
                 border-radius: 12px;
+            }
+
+
+            @media (max-width: 720px) {
+                main {
+                    padding: 0;
+                    margin: 0;
+                }
+                .hero-image {
+                    max-width: 80vw;
+                    & img {
+                        max-height: unset;
+                    }
+                }
+                article .prose{
+                    padding: 1em;
+                    max-width: 100vw;
+                }
+
             }
 
 
