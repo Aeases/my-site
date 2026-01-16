@@ -3,6 +3,7 @@
   https://github.com/HermanMartinus/bearblog/blob/297026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/blog/default.css
   License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
  */
+@import "./theme.css";
 
 :root {
     --accent: #2337ff;
@@ -23,6 +24,8 @@
     --card-divider-color: var(--flexoki-900);
     --border-card: 1px solid var(--card-divider-color);
     --fancy-title-fonts: 'Recoleta', 'Noto Serif JP';
+    --date-fonts: 'SourceCodePro';
+    --a-hover: var(--color-bl);
 }
 
 /* from obsidian */

@@ -10,12 +10,16 @@ import { Image } from 'astro:assets';
 const projects = (await getCollection('projects')).sort(
     (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
+
+const posts = (await getCollection('posts')).sort(
+    (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
 ---
 
 <!doctype html>
 <html lang="en">
     <head>
-        <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+        <BaseHead title="Updates" description={SITE_DESCRIPTION} />
         <style>
         .layout-grid-container {
             display: grid;
@@ -23,40 +27,39 @@ const projects = (await getCollection('projects')).sort(
         }
 
 
-        .blogs > p 
 
-        .post-card {
-            cursor: wait;
-            margin-right: auto;
-            margin-left: auto;
+        .post-item {
+            &:hover {
+                color: var(--color-bl)
+            }
+            .date {
+                color: var(--color-tx-muted);
+                font-family: var(--date-fonts);
+            }
+            .title {
+                margin: 0 0 0.1em;
+                line-height: 1.2;
+                font-family: var(--fancy-title-fonts);
+                text-decoration: underline;
+                text-underline-offset: 2px;
+                margin-right: 2rem;
+            }
         }
-        ul:has(.post-card) {	
-            /*The ul should take up the whole parent, it has li's that are smaller inside. */
-            display: grid;
-            grid-template-columns: 1fr;
-            justify-content: space-around;
-            justify-items: center;
-            gap: 0.5em;
-        }
 
-
-        .post-card {
+        .project-card {
             display: grid;
             padding: 1rem;
-            /* 	background-color: var(--color-bg-secondary); */
             grid-template-columns: 1fr 1fr;	
             border-radius: var(--radius-card);
-            /* 	border: var(--border-card);
-border-style: dotted;	 */
             gap: 0.5em 0.75em;
 
-            & .post-image {
+            .project-image {
                 grid-area: image;
                 object-fit: cover;
                 border-radius: var(--radius-univ);
                 aspect-ratio: 1/1;
             }
-            & .post-textcontent {
+            .project-textcontent {
                 grid-area: textcontent;
                 display: grid;
                 align-content: center;
@@ -77,11 +80,11 @@ border-style: dotted;	 */
         }
 
         li {
-            &:nth-child(even) > .post-card {
+            &:nth-child(even) > .project-card {
                 grid-template-areas: 'textcontent image';
                 text-align: right;
             }		
-            &:nth-child(odd) > .post-card {
+            &:nth-child(odd) > .project-card {
                 grid-template-areas: 'image textcontent';
                 text-align: left;
             }
@@ -91,14 +94,35 @@ border-style: dotted;	 */
     <body class="theme-dark">
         <Header title={SITE_TITLE} />
         <main class="layout-grid-container">
+
+
+
+            <div class="updates">
+                <ul>
+                    {
+                    posts.filter(p => p.data.private !== true).map((post) => (
+                            <li>
+                                <a class="post-item" href={`/${post.slug}/`}>
+                                    <span class="date">{<FormattedDate date={post.data.pubDate} />}</span>
+                                    <span class="title">{post.data.title}</span>
+                                </a>
+
+                            </li>
+                        ))
+                        
+                    }
+                </ul>
+
+            </div>
+
             <div class="projects">
                 <ul>
                     {
                     projects.filter(p => p.data.private !== true).map((prj) => (
                     <li>	
-                        <a href={`/${prj.slug}/`} class="post-card">
-                            <Image class="post-image" width={720} height={720} src={prj.data.heroImage} alt="" />
-                            <div class="post-textcontent">
+                        <a href={`/${prj.slug}/`} class="project-card">
+                            <Image class="project-image" width={720} height={720} src={prj.data.heroImage} alt="" />
+                            <div class="project-textcontent">
                                 <header class="title">{prj.data.title}</header>
                                 <p class="date">
                                     <FormattedDate date={prj.data.pubDate} />
