@@ -25,10 +25,12 @@ const posts = await getCollection('posts')
 
 
 projects.forEach(project => {
+    // @ts-ignore
   project.type = blogEntityType.POST;
 });
 
 posts.forEach(post => {
+    // @ts-ignore
   post.type = blogEntityType.UPDATE;
 });
 
@@ -151,8 +153,8 @@ const blogEntities = [...projects, ...posts].sort(
                 <ul>
                     {
                     blogEntities.filter(p => p.data.private !== true).map((blog_ent) => {
-                        if (blog_ent.type == blogEntityType.POST) {
-                            const prj = blog_ent
+                        if ((blog_ent as any).type == blogEntityType.POST) {
+                            const prj = (blog_ent as any)
                             return (
                                 <post>	
                                     <a href={`/${prj.slug}/`} class="project-card">
@@ -166,7 +168,7 @@ const blogEntities = [...projects, ...posts].sort(
                                     </a>
                                 </post>
                             )
-                        } else if (blog_ent.type == blogEntityType.UPDATE) {
+                        } else if ((blog_ent as any).type == blogEntityType.UPDATE) {
                             const update = blog_ent
                             return (
                                 <update>
