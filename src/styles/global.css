@@ -5,6 +5,7 @@
  */
 @import "./theme.css";
 
+
 body {
     --accent: #2337ff;
     --accent-dark: #000d8a;
@@ -26,6 +27,10 @@ body {
     --border-card: 1px solid var(--card-divider-color);
     --fancy-title-fonts: 'Recoleta', 'Noto Serif JP';
     --date-fonts: 'SourceCodePro';
+}
+
+nav::selection {
+    background-color: transparent; 
 }
 
 /* from obsidian */
@@ -211,6 +216,10 @@ hr {
     border: none;
     border-top: 1px solid var(--color-ui-normal);
     width: 100%;
+}
+
+br::selection {
+    background-color: transparent; 
 }
 
 
