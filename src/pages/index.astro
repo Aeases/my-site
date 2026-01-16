@@ -7,13 +7,37 @@ import FormattedDate from '../components/FormattedDate.astro';
 import { getCollection } from 'astro:content';
 import { Image } from 'astro:assets';
 
-const projects = (await getCollection('projects')).sort(
-    (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+const blogEntityType = {
+  UPDATE: "UPDATE",
+  POST: "POST"
+};
+
+// const projects = (await getCollection('projects')).sort(
+//     (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+// );
+
+// const posts = (await getCollection('posts')).sort(
+//     (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+// );
+
+const projects = await getCollection('projects')
+const posts = await getCollection('posts')
+
+
+projects.forEach(project => {
+  project.type = blogEntityType.POST;
+});
+
+posts.forEach(post => {
+  post.type = blogEntityType.UPDATE;
+});
+
+const blogEntities = [...projects, ...posts].sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
 
-const posts = (await getCollection('posts')).sort(
-    (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
-);
+
+
 ---
 
 <!doctype html>
@@ -28,9 +52,12 @@ const posts = (await getCollection('posts')).sort(
 
 
 
-        .post-item {
-            &:hover {
-                color: var(--color-bl)
+        update {
+
+
+
+            a:hover {
+                color: var(--a-hover)
             }
             .date {
                 color: var(--color-tx-muted);
@@ -79,12 +106,12 @@ const posts = (await getCollection('posts')).sort(
             }
         }
 
-        li {
-            &:nth-child(even) > .project-card {
+        post {
+            &:nth-of-type(even) > .project-card {
                 grid-template-areas: 'textcontent image';
                 text-align: right;
             }		
-            &:nth-child(odd) > .project-card {
+            &:nth-of-type(odd) > .project-card {
                 grid-template-areas: 'image textcontent';
                 text-align: left;
             }
@@ -100,40 +127,41 @@ const posts = (await getCollection('posts')).sort(
             <div class="updates">
                 <ul>
                     {
-                    posts.filter(p => p.data.private !== true).map((post) => (
-                            <li>
-                                <a class="post-item" href={`/${post.slug}/`}>
-                                    <span class="date">{<FormattedDate date={post.data.pubDate} />}</span>
-                                    <span class="title">{post.data.title}</span>
-                                </a>
+                    blogEntities.filter(p => p.data.private !== true).map((blog_ent) => {
+                        if (blog_ent.type == blogEntityType.POST) {
+                            const prj = blog_ent
+                            return (
+                                <post>	
+                                    <a href={`/${prj.slug}/`} class="project-card">
+                                        <Image class="project-image" width={720} height={720} src={prj.data.heroImage} alt="" />
+                                        <div class="project-textcontent">
+                                            <header class="title">{prj.data.title}</header>
+                                            <p class="date">
+                                                <FormattedDate date={prj.data.pubDate} />
+                                            </p>
+                                        </div>
+                                    </a>
+                                </post>
+                            )
+                        } else if (blog_ent.type == blogEntityType.UPDATE) {
+                            const update = blog_ent
+                            return (
+                                <update>
+                                    <a class="update-item" href={`/${update.slug}/`}>
+                                        <span class="date">{<FormattedDate date={update.data.pubDate} />}</span>
+                                        <span class="title">{update.data.title}</span>
+                                    </a>
+                                </update>
+                            )
+                        }                       }
+                    )}
 
-                            </li>
-                        ))
-                        
-                    }
                 </ul>
 
             </div>
 
             <div class="projects">
                 <ul>
-                    {
-                    projects.filter(p => p.data.private !== true).map((prj) => (
-                    <li>	
-                        <a href={`/${prj.slug}/`} class="project-card">
-                            <Image class="project-image" width={720} height={720} src={prj.data.heroImage} alt="" />
-                            <div class="project-textcontent">
-                                <header class="title">{prj.data.title}</header>
-                                <p class="date">
-                                    <FormattedDate date={prj.data.pubDate} />
-                                </p>
-                            </div>
-                        </a>
-                    </li>
-
-                    ))
-                    }
-
                 </ul>
             </div>
         </main>
