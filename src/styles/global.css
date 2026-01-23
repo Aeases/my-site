@@ -28,6 +28,9 @@ body {
     --fancy-title-fonts: 'Recoleta', 'Noto Serif JP';
     --date-fonts: 'SourceCodePro';
     --list-spacing: 0.075em;
+    --p-spacing: 1rem;
+    --heading-spacing: calc(1rem * 2.5);
+
 }
 
 nav::selection {
@@ -139,6 +142,8 @@ h4,
 h5,
 h6 {
     margin: 0 0 0.5rem 0;
+    margin-block-start: var(--p-spacing);
+    margin-block-end: var(--p-spacing);
     color: rgb(var(--color-pu));
     line-height: 1.2;
 }
