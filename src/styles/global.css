@@ -27,6 +27,7 @@ body {
     --border-card: 1px solid var(--card-divider-color);
     --fancy-title-fonts: 'Recoleta', 'Noto Serif JP';
     --date-fonts: 'SourceCodePro';
+    --list-spacing: 0.075em;
 }
 
 nav::selection {

@@ -15,7 +15,7 @@ It's like a **GPU** but it's **E**xternal, which means you can plug it into any 
 
 I've replaced my PC with this setup, because there's no reason not to. There are **only** advantages.<span style="color: var(--color-ye)"><b>*</b></span>
 
-First of all, I already bought a seperate laptop to untether my PC'ing from my house, sometimes we all need to leave the house with a laptop whether that be for Uni, School, Work, or just to go to a friends house. Why duplicate that hardware? New laptops have CPU's with similar potential to desktop computers anyway, e.g. this is the performance comparison between my new laptop to my (at the time) 3-4 year old pc.
+First of all, I already bought a seperate laptop to untether my PC'ing from my house, sometimes we all need to leave the house with a laptop whether that be for Uni, School, Work, or just to go to a friends house. Why duplicate that hardware? New laptops have CPU's with similar potential to desktop computers anyway, e.g. this is the performance comparison between my new laptop to my (at the time) 2 year old pc.
 
 <svg  viewBox="0 0 16000 9000" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" stroke-width="28.222" stroke-linejoin="round" xml:space="preserve">
  <path fill="none" stroke="var(--color-ui-normal)" stroke-linejoin="round" d="M 8590,8159 L 1514,8159 1514,1149 15666,1149 15666,8159 8590,8159 Z "/>
@@ -67,34 +67,26 @@ First of all, I already bought a seperate laptop to untether my PC'ing from my h
  <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="8432" y="590"><tspan font-family="Liberation Sans, sans-serif" font-size="353px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="2828" stroke="none" style="white-space: pre">Old PC (Windows)</tspan></tspan></tspan></text>
 </svg>
 
-
-Laptops also tend to be more stable when it comes to things like Wi-Fi and Bluetooth, It may be a skill-issue but every desktop I've owned has had weird issues with bluetooth.
+Laptops also tend to be more stable when it comes to things like Wi-Fi and Bluetooth, It may be a skill-issue but every desktop I've owned has had weird issues with bluetooth, when you have a laptop there are support forms of people who have the exact same setup as you, making diagnosing issues way easier.
 e.g. Windows showing bluetooth is disabled for no reason :<
 
 
 
 # The <span style="color: var(--color-ye)"><b>*</b></span>
-You do have to give up ~10% of GPU performance, you can make most of this back if you get video out directly from the GPU but personally this hasn't been very stable for me, I can't get it to work on Linux, and on windows if you boot with a HDMI plugged into the GPU it just boot-loops, (it works if you boot then plug in the GPU after). These issues don't exist if you just eat the 10% performance loss and get video out from the laptop, I've found this to be stable and personally the loss hasn't been noticable.
+1. E
+2. F
 
+
+You do have to give up some GPU performance, you can make some of this back if you get video out directly from the GPU but personally this hasn't been very stable for me, I can't get it to work on Linux, and on windows if you boot with a HDMI plugged into the GPU it just boot-loops, (it works if you boot then plug in the GPU after). These issues don't exist if you just eat the 10% performance loss and get video out from the laptop, I've found this to be stable and personally the loss hasn't been noticable.
 
 >[!info] Why is there performance loss?
 >
->Some performance loss is just inherent to eGPU's<span style="color: var(--color-or)">*</span> the PCIe information has to be encoded and decoded on either side of the connection, this takes time and so you lose some performance, nothing you can do about it.
+>Some performance loss is just inherent<span style="color: var(--color-ma)"><b>\*</b></span> to eGPU's the PCIe information has to be encoded and decoded on either side of the connection, this takes time and so you lose some performance, nothing you can do about it.<span style="color: var(--color-ma)"><b>\*</b></span>
 >
->The rest of the performance loss is due to thunderbolt haivng **less bandwidth** than jacked out fully-fledged PCIe, this manifests itself in two scenarios;
->1. Your display-out is from the laptop rather than the GPU's ports, meaning the thunderbolt now also has to carry rendered frames from the GPU back to the iGPU over that thunderbolt connection to be displayed
->2. The GPU needs lots of high-resolution information (e.g. detailed textures) to render, too much data for the connection means the GPU has to wait and can't start rendering right away.
+>The rest of the performance loss is due to thunderbolt haivng **less bandwidth** than jacked out fully-fledged PCIe.
+>
+>-  High-resolution information (e.g. detailed textures), may take up more bandwidth than is available, forcing the GPU to wait before rendering the next frame
+>-  When your FPS is ***toooo good*** transferring rendered frames back to the iGPU for displaying will eat up some of the already limited bandwidth
 
-
-
-
-
-
-
-I first thought about switching when I bought my new framework laptop, the CPU it had (Ryzen 7640U) had basically identical performance to my then desktop CPU (Ryzen 5600x) while also having 333% lower power consumption.
-When I got my framework I stuck my desktop's 2TB M.2 SSD in it and hooked it up to my old 3070 via a thunderbolt cable.
-
-Thunderbolt is pretty epic by the way 
-
-
-I found out the CPU power of my 4 year old desktop CPU was about the same as my new framework laptop, so I decided to give the desktop away but keep the graphics card, and stick it in a EGPU enclosure
+# Why idc 
+Now for some people e.g. professional GAMMERRRS who need 467fps and the lowest potential latency on valorant, these could be dealbreakers, personally however I never noticed the performance loss from switching, and the convenience by far outweighed the cost.

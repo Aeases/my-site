@@ -140,12 +140,27 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 
 
                 ul>li {
-                    padding: 0.15em, 0;
-                    list-style-position: inside;
-                    list-style-type: "• ";
-                    &::marker {
-                        color: var(--color-tx-faint);
-                        font-size: 105%;
+                    list-style-type: disc;
+                }
+
+                ol>li {
+                    list-style-type: decimal;
+                }
+
+                ol,ul {
+                    padding-inline-start: 0;
+                    /* margin-block-end: 1rem;
+                    margin-block-start: 1rem; */
+
+                    & > li {
+                        margin-inline-start: 3ch;
+                        padding-top: var(--list-spacing);
+                        padding-bottom: var(--list-spacing);
+                        padding: 0.15em, 0;
+                        &::marker {
+                            color: var(--color-tx-faint);
+                            font-size: 105%;
+                        }
                     }
                 }
 
