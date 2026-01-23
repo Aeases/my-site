@@ -15,60 +15,81 @@ It's like a **GPU** but it's **E**xternal, which means you can plug it into any 
 
 I've replaced my PC with this setup, because there's no reason not to. There are **only** advantages.<span style="color: var(--color-ye)"><b>*</b></span>
 
-First of all, I already bought a seperate laptop to untether my PC'ing from my house, sometimes we all need to leave the house with a laptop whether that be for Uni, School, Work, or just to go to a friends house. Why duplicate that hardware? New laptops have CPU's with similar potential to desktop computers anyway, look at this performance comparance between my new laptop to my 2 year old pc.
+First of all, I already bought a seperate laptop to untether my PC'ing from my house, sometimes we all need to leave the house with a laptop whether that be for Uni, School, Work, or just to go to a friends house. Why duplicate that hardware? New laptops have CPU's with similar potential to desktop computers anyway, e.g. this is the performance comparison between my new laptop to my (at the time) 3-4 year old pc.
 
-<svg width="160mm" height="90mm" viewBox="0 0 16000 9000" version="1.1"  stroke-width="28.222" stroke-linejoin="round" xml:space="preserve">
- <path fill="none" stroke="var(--color-ui-normal)" stroke-linejoin="round" d="M 6779,8159 L 1514,8159 1514,366 12044,366 12044,8159 6779,8159 Z "/>
- <path fill="none" stroke="var(--color-ui-normal)" stroke-linejoin="round" d="M 12044,8158 L 1514,8158 "/>
- <path fill="none" stroke="var(--color-ui-normal)" stroke-linejoin="round" d="M 12044,6859 L 1514,6859 "/>
- <path fill="none" stroke="var(--color-ui-normal)" stroke-linejoin="round" d="M 12044,5560 L 1514,5560 "/>
- <path fill="none" stroke="var(--color-ui-normal)" stroke-linejoin="round" d="M 12044,4262 L 1514,4262 "/>
- <path fill="none" stroke="var(--color-ui-normal)" stroke-linejoin="round" d="M 12044,2963 L 1514,2963 "/>
- <path fill="none" stroke="var(--color-ui-normal)" stroke-linejoin="round" d="M 12044,1664 L 1514,1664 "/>
- <path fill="none" stroke="var(--color-ui-normal)" stroke-linejoin="round" d="M 12044,365 L 1514,365 "/>
+<svg  viewBox="0 0 16000 9000" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" stroke-width="28.222" stroke-linejoin="round" xml:space="preserve">
+ <path fill="none" stroke="var(--color-ui-normal)" stroke-linejoin="round" d="M 8590,8159 L 1514,8159 1514,1149 15666,1149 15666,8159 8590,8159 Z "/>
+ <path fill="none" stroke="var(--color-ui-normal)" stroke-linejoin="round" d="M 15666,8158 L 1514,8158 "/>
+ <path fill="none" stroke="var(--color-ui-normal)" stroke-linejoin="round" d="M 15666,6989 L 1514,6989 "/>
+ <path fill="none" stroke="var(--color-ui-normal)" stroke-linejoin="round" d="M 15666,5821 L 1514,5821 "/>
+ <path fill="none" stroke="var(--color-ui-normal)" stroke-linejoin="round" d="M 15666,4652 L 1514,4652 "/>
+ <path fill="none" stroke="var(--color-ui-normal)" stroke-linejoin="round" d="M 15666,3485 L 1514,3485 "/>
+ <path fill="none" stroke="var(--color-ui-normal)" stroke-linejoin="round" d="M 15666,2316 L 1514,2316 "/>
+ <path fill="none" stroke="var(--color-ui-normal)" stroke-linejoin="round" d="M 15666,1148 L 1514,1148 "/>
  <path fill="none" stroke="var(--color-ui-normal)" stroke-linejoin="round" d="M 1514,8308 L 1514,8158 "/>
  <path fill="none" stroke="var(--color-ui-normal)" stroke-linejoin="round" d="M 1514,8308 L 1514,8158 "/>
- <path fill="none" stroke="var(--color-ui-normal)" stroke-linejoin="round" d="M 6779,8308 L 6779,8158 "/>
- <path fill="none" stroke="var(--color-ui-normal)" stroke-linejoin="round" d="M 6779,8308 L 6779,8158 "/>
- <path fill="none" stroke="var(--color-ui-normal)" stroke-linejoin="round" d="M 12044,8308 L 12044,8158 "/>
- <path fill="none" stroke="var(--color-ui-normal)" stroke-linejoin="round" d="M 12044,8308 L 12044,8158 "/>
- <path fill="none" stroke="var(--color-ui-normal)" stroke-linejoin="round" d="M 1514,8158 L 12044,8158 "/>
+ <path fill="none" stroke="var(--color-ui-normal)" stroke-linejoin="round" d="M 8589,8308 L 8589,8158 "/>
+ <path fill="none" stroke="var(--color-ui-normal)" stroke-linejoin="round" d="M 8589,8308 L 8589,8158 "/>
+ <path fill="none" stroke="var(--color-ui-normal)" stroke-linejoin="round" d="M 15666,8308 L 15666,8158 "/>
+ <path fill="none" stroke="var(--color-ui-normal)" stroke-linejoin="round" d="M 15666,8308 L 15666,8158 "/>
+ <path fill="none" stroke="var(--color-ui-normal)" stroke-linejoin="round" d="M 1514,8158 L 15666,8158 "/>
  <path fill="none" stroke="var(--color-ui-normal)" stroke-linejoin="round" d="M 1364,8158 L 1514,8158 "/>
  <path fill="none" stroke="var(--color-ui-normal)" stroke-linejoin="round" d="M 1364,8158 L 1514,8158 "/>
- <path fill="none" stroke="var(--color-ui-normal)" stroke-linejoin="round" d="M 1364,6859 L 1514,6859 "/>
- <path fill="none" stroke="var(--color-ui-normal)" stroke-linejoin="round" d="M 1364,6859 L 1514,6859 "/>
- <path fill="none" stroke="var(--color-ui-normal)" stroke-linejoin="round" d="M 1364,5560 L 1514,5560 "/>
- <path fill="none" stroke="var(--color-ui-normal)" stroke-linejoin="round" d="M 1364,5560 L 1514,5560 "/>
- <path fill="none" stroke="var(--color-ui-normal)" stroke-linejoin="round" d="M 1364,4262 L 1514,4262 "/>
- <path fill="none" stroke="var(--color-ui-normal)" stroke-linejoin="round" d="M 1364,4262 L 1514,4262 "/>
- <path fill="none" stroke="var(--color-ui-normal)" stroke-linejoin="round" d="M 1364,2963 L 1514,2963 "/>
- <path fill="none" stroke="var(--color-ui-normal)" stroke-linejoin="round" d="M 1364,2963 L 1514,2963 "/>
- <path fill="none" stroke="var(--color-ui-normal)" stroke-linejoin="round" d="M 1364,1664 L 1514,1664 "/>
- <path fill="none" stroke="var(--color-ui-normal)" stroke-linejoin="round" d="M 1364,1664 L 1514,1664 "/>
- <path fill="none" stroke="var(--color-ui-normal)" stroke-linejoin="round" d="M 1364,365 L 1514,365 "/>
- <path fill="none" stroke="var(--color-ui-normal)" stroke-linejoin="round" d="M 1364,365 L 1514,365 "/>
- <path fill="none" stroke="var(--color-ui-normal)" stroke-linejoin="round" d="M 1514,8158 L 1514,365 "/>
- <path fill="var(--color-bl)" stroke="none" d="M 2391,8158 L 4146,8158 4146,6629 2391,6629 2391,8158 Z "/>
- <path fill="var(--color-bl)" stroke="none" d="M 7657,8158 L 9411,8158 9411,1347 7657,1347 7657,8158 Z "/>
- <path fill="var(--color-or)" stroke="none" d="M 4146,8158 L 5901,8158 5901,6860 4146,6860 4146,8158 Z "/>
- <path fill="var(--color-or)" stroke="none" d="M 9411,8158 L 11166,8158 11166,2796 9411,2796 9411,8158 Z "/>
- <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="3238" y="8726"><tspan font-family="Liberation Sans, sans-serif" font-size="353px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="1816" style="white-space: pre">Single-Core</tspan></tspan></tspan></text>
- <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="8618" y="8726"><tspan font-family="Liberation Sans, sans-serif" font-size="353px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="1586" style="white-space: pre">Multi-Core</tspan></tspan></tspan></text>
- <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="1073" y="8278"><tspan font-family="Liberation Sans, sans-serif" font-size="353px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="191" style="white-space: pre">0</tspan></tspan></tspan></text>
- <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="499" y="6979"><tspan font-family="Liberation Sans, sans-serif" font-size="353px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="765" style="white-space: pre">2000</tspan></tspan></tspan></text>
- <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="499" y="5680"><tspan font-family="Liberation Sans, sans-serif" font-size="353px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="765" style="white-space: pre">4000</tspan></tspan></tspan></text>
- <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="499" y="4382"><tspan font-family="Liberation Sans, sans-serif" font-size="353px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="765" style="white-space: pre">6000</tspan></tspan></tspan></text>
- <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="499" y="3083"><tspan font-family="Liberation Sans, sans-serif" font-size="353px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="765" style="white-space: pre">8000</tspan></tspan></tspan></text>
- <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="308" y="1784"><tspan font-family="Liberation Sans, sans-serif" font-size="353px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="956" style="white-space: pre">10000</tspan></tspan></tspan></text>
- <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="308" y="485"><tspan font-family="Liberation Sans, sans-serif" font-size="353px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="956" style="white-space: pre">12000</tspan></tspan></tspan></text>
- <path fill="var(--color-bl)" stroke="none" d="M 12531,7465 L 12425,7465 12425,7254 12636,7254 12636,7465 12531,7465 Z "/>
- <path fill="var(--color-or)" stroke="none" d="M 12531,7963 L 12425,7963 12425,7752 12636,7752 12636,7963 12531,7963 Z "/>
- <text fill="currentColor" class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="12736" y="7479"><tspan font-family="Liberation Sans, sans-serif" font-size="353px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="2866" style="white-space: pre">Framework (Linux)</tspan></tspan></tspan></text>
- <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="12736" y="7977"><tspan font-family="Liberation Sans, sans-serif" font-size="353px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="2828" style="white-space: pre">Old PC (Windows)</tspan></tspan></tspan></text>
+ <path fill="none" stroke="var(--color-ui-normal)" stroke-linejoin="round" d="M 1364,6989 L 1514,6989 "/>
+ <path fill="none" stroke="var(--color-ui-normal)" stroke-linejoin="round" d="M 1364,6989 L 1514,6989 "/>
+ <path fill="none" stroke="var(--color-ui-normal)" stroke-linejoin="round" d="M 1364,5821 L 1514,5821 "/>
+ <path fill="none" stroke="var(--color-ui-normal)" stroke-linejoin="round" d="M 1364,5821 L 1514,5821 "/>
+ <path fill="none" stroke="var(--color-ui-normal)" stroke-linejoin="round" d="M 1364,4652 L 1514,4652 "/>
+ <path fill="none" stroke="var(--color-ui-normal)" stroke-linejoin="round" d="M 1364,4652 L 1514,4652 "/>
+ <path fill="none" stroke="var(--color-ui-normal)" stroke-linejoin="round" d="M 1364,3485 L 1514,3485 "/>
+ <path fill="none" stroke="var(--color-ui-normal)" stroke-linejoin="round" d="M 1364,3485 L 1514,3485 "/>
+ <path fill="none" stroke="var(--color-ui-normal)" stroke-linejoin="round" d="M 1364,2316 L 1514,2316 "/>
+ <path fill="none" stroke="var(--color-ui-normal)" stroke-linejoin="round" d="M 1364,2316 L 1514,2316 "/>
+ <path fill="none" stroke="var(--color-ui-normal)" stroke-linejoin="round" d="M 1364,1148 L 1514,1148 "/>
+ <path fill="none" stroke="var(--color-ui-normal)" stroke-linejoin="round" d="M 1364,1148 L 1514,1148 "/>
+ <path fill="none" stroke="var(--color-ui-normal)" stroke-linejoin="round" d="M 1514,8158 L 1514,1148 "/>
+ <path fill="var(--color-bl)" stroke="none" d="M 2693,8158 L 5052,8158 5052,6782 2693,6782 2693,8158 Z "/>
+ <path fill="var(--color-bl)" stroke="none" d="M 9768,8158 L 12127,8158 12127,2031 9768,2031 9768,8158 Z "/>
+ <path fill="var(--color-or)" stroke="none" d="M 5052,8158 L 7411,8158 7411,6991 5052,6991 5052,8158 Z "/>
+ <path fill="var(--color-or)" stroke="none" d="M 12127,8158 L 14486,8158 14486,3335 12127,3335 12127,8158 Z "/>
+ <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="4144" y="8726"><tspan font-family="Liberation Sans, sans-serif" font-size="353px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="1816" stroke="none" style="white-space: pre">Single-Core</tspan></tspan></tspan></text>
+ <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="11334" y="8726"><tspan font-family="Liberation Sans, sans-serif" font-size="353px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="1586" stroke="none" style="white-space: pre">Multi-Core</tspan></tspan></tspan></text>
+ <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="1073" y="8278"><tspan font-family="Liberation Sans, sans-serif" font-size="353px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="191" stroke="none" style="white-space: pre">0</tspan></tspan></tspan></text>
+ <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="499" y="7109"><tspan font-family="Liberation Sans, sans-serif" font-size="353px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="765" stroke="none" style="white-space: pre">2000</tspan></tspan></tspan></text>
+ <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="499" y="5941"><tspan font-family="Liberation Sans, sans-serif" font-size="353px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="765" stroke="none" style="white-space: pre">4000</tspan></tspan></tspan></text>
+ <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="499" y="4772"><tspan font-family="Liberation Sans, sans-serif" font-size="353px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="765" stroke="none" style="white-space: pre">6000</tspan></tspan></tspan></text>
+ <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="499" y="3605"><tspan font-family="Liberation Sans, sans-serif" font-size="353px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="765" stroke="none" style="white-space: pre">8000</tspan></tspan></tspan></text>
+ <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="308" y="2436"><tspan font-family="Liberation Sans, sans-serif" font-size="353px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="956" stroke="none" style="white-space: pre">10000</tspan></tspan></tspan></text>
+ <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="308" y="1268"><tspan font-family="Liberation Sans, sans-serif" font-size="353px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="956" stroke="none" style="white-space: pre">12000</tspan></tspan></tspan></text>
+ <path fill="var(--color-bl)" stroke="none" d="M 4815,576 L 4710,576 4710,365 4921,365 4921,576 4815,576 Z "/>
+ <path fill="var(--color-or)" stroke="none" d="M 8227,576 L 8121,576 8121,365 8332,365 8332,576 8227,576 Z "/>
+ <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="5021" y="590"><tspan font-family="Liberation Sans, sans-serif" font-size="353px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="2866" stroke="none" style="white-space: pre">Framework (Linux)</tspan></tspan></tspan></text>
+ <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="8432" y="590"><tspan font-family="Liberation Sans, sans-serif" font-size="353px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="2828" stroke="none" style="white-space: pre">Old PC (Windows)</tspan></tspan></tspan></text>
 </svg>
 
 
-Laptops also tend to work better when it comes to wireless stuff, It may be a skill-issue but every desktop I've owned has had weird issues with bluetooth, and sometimes wireless but laptops just don't have these problems.
+Laptops also tend to be more stable when it comes to things like Wi-Fi and Bluetooth, It may be a skill-issue but every desktop I've owned has had weird issues with bluetooth.
+e.g. Windows showing bluetooth is disabled for no reason :<
+
+
+
+# The <span style="color: var(--color-ye)"><b>*</b></span>
+You do have to give up ~10% of GPU performance, you can make most of this back if you get video out directly from the GPU but personally this hasn't been very stable for me, I can't get it to work on Linux, and on windows if you boot with a HDMI plugged into the GPU it just boot-loops, (it works if you boot then plug in the GPU after). These issues don't exist if you just eat the 10% performance loss and get video out from the laptop, I've found this to be stable and personally the loss hasn't been noticable.
+
+
+>[!info] Why is there performance loss?
+>
+>Some performance loss is just inherent to eGPU's<span style="color: var(--color-or)">*</span> the PCIe information has to be encoded and decoded on either side of the connection, this takes time and so you lose some performance, nothing you can do about it.
+>
+>The rest of the performance loss is due to thunderbolt haivng **less bandwidth** than jacked out fully-fledged PCIe, this manifests itself in two scenarios;
+>1. Your display-out is from the laptop rather than the GPU's ports, meaning the thunderbolt now also has to carry rendered frames from the GPU back to the iGPU over that thunderbolt connection to be displayed
+>2. The GPU needs lots of high-resolution information (e.g. detailed textures) to render, too much data for the connection means the GPU has to wait and can't start rendering right away.
+
+
+
+
+
+
 
 I first thought about switching when I bought my new framework laptop, the CPU it had (Ryzen 7640U) had basically identical performance to my then desktop CPU (Ryzen 5600x) while also having 333% lower power consumption.
 When I got my framework I stuck my desktop's 2TB M.2 SSD in it and hooked it up to my old 3070 via a thunderbolt cable.
