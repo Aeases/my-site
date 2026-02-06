@@ -68,7 +68,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
             }
             .prose {
                 color: var(--color-tx-normal);
-                font-family: -apple-system, BlinkMacSystemFont, "Inter", "IBM Plex Sans", Segoe UI, Helvetica, Arial, sans-serif;
+                font-family: -apple-system, BlinkMacSystemFont, "Inter", "Noto Sans JP", "IBM Plex Sans", Segoe UI, Helvetica, Arial, sans-serif;
 
                 
                 svg text { 
@@ -149,8 +149,6 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 
                 ol,ul {
                     padding-inline-start: 0;
-                    /* margin-block-end: 1rem;
-                    margin-block-start: 1rem; */
 
                     & > li {
                         margin-inline-start: 3ch;
@@ -164,8 +162,9 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
                     }
                 }
 
-                p {
-                    margin-bottom: 1.5rem;
+                p, ul, ol {
+                    margin-block-start: var(--p-spacing);
+                    margin-block-end: var(--p-spacing);
                 }
 
                 /* Regular blockquotes */

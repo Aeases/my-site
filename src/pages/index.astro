@@ -136,11 +136,11 @@ const blogEntities = [...projects, ...posts].sort(
 
         post {
             &:nth-of-type(even) > .project-card {
-                grid-template-areas: 'textcontent image';
+                grid-template-areas: 'image textcontent';
                 text-align: right;
             }		
             &:nth-of-type(odd) > .project-card {
-                grid-template-areas: 'image textcontent';
+                grid-template-areas: 'textcontent image';
                 text-align: left;
             }
         }

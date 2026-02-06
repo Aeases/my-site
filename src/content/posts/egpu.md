@@ -1,15 +1,9 @@
 ---
 title: "EGpu's"
-description: "why tf dont more people use them??"
+description: "they're cool imo"
 pubDate: "Jan 18 2026"
 heroImage: "../images/creditsCover.svg"
 ---
-
-- What is an eGPU
-- No problem of transferring between PC and laptop, i.e. can go to friends house, or have multiple eGPUs
-- might think bad performance but similar performance
-- 
-
 # What is an EGPU?
 It's like a **GPU** but it's **E**xternal, which means you can plug it into any laptop and power up its (often shit) graphical power by 10x with a desktop level card.
 
@@ -73,20 +67,16 @@ e.g. Windows showing bluetooth is disabled for no reason :<
 
 
 # The <span style="color: var(--color-ye)"><b>*</b></span>
-1. E
-2. F
-
-
 You do have to give up some GPU performance, you can make some of this back if you get video out directly from the GPU but personally this hasn't been very stable for me, I can't get it to work on Linux, and on windows if you boot with a HDMI plugged into the GPU it just boot-loops, (it works if you boot then plug in the GPU after). These issues don't exist if you just eat the 10% performance loss and get video out from the laptop, I've found this to be stable and personally the loss hasn't been noticable.
 
 >[!info] Why is there performance loss?
 >
 >Some performance loss is just inherent<span style="color: var(--color-ma)"><b>\*</b></span> to eGPU's the PCIe information has to be encoded and decoded on either side of the connection, this takes time and so you lose some performance, nothing you can do about it.<span style="color: var(--color-ma)"><b>\*</b></span>
 >
->The rest of the performance loss is due to thunderbolt haivng **less bandwidth** than jacked out fully-fledged PCIe.
+>Thunderbolt also has **less bandwidth** than jacked out fully-fledged PCIe. This can manifest as performance loss when;
 >
->-  High-resolution information (e.g. detailed textures), may take up more bandwidth than is available, forcing the GPU to wait before rendering the next frame
->-  When your FPS is ***toooo good*** transferring rendered frames back to the iGPU for displaying will eat up some of the already limited bandwidth
+>1.  High-resolution information (e.g. detailed textures), may take up more bandwidth than is available, forcing the GPU to wait before rendering the next frame
+>2.  When your FPS is ***toooo good*** transferring rendered frames back to the iGPU for displaying will eat up some of the already limited bandwidth
 
 # Why idc 
 Now for some people e.g. professional GAMMERRRS who need 467fps and the lowest potential latency on valorant, these could be dealbreakers, personally however I never noticed the performance loss from switching, and the convenience by far outweighed the cost.
