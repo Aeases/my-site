@@ -10,7 +10,7 @@ It's like a **GPU** but it's **E**xternal, which means you can plug it into any 
 I've replaced my PC with this setup, because there's no reason not to. There are **only** advantages.<span style="color: var(--color-ye)"><b>*</b></span>
 
 First of all, I already bought a seperate laptop to untether my PC'ing from my house, sometimes we all need to leave the house with a laptop whether that be for Uni, School, Work, or just to go to a friends house. Why duplicate that hardware? New laptops have CPU's with similar potential to desktop computers anyway, e.g. this is the performance comparison between my new laptop to my (at the time) 2 year old pc.
-
+<p>
 <svg  viewBox="0 0 16000 9000" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" stroke-width="28.222" stroke-linejoin="round" xml:space="preserve">
  <path fill="none" stroke="var(--color-ui-normal)" stroke-linejoin="round" d="M 8590,8159 L 1514,8159 1514,1149 15666,1149 15666,8159 8590,8159 Z "/>
  <path fill="none" stroke="var(--color-ui-normal)" stroke-linejoin="round" d="M 15666,8158 L 1514,8158 "/>
@@ -60,11 +60,9 @@ First of all, I already bought a seperate laptop to untether my PC'ing from my h
  <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="5021" y="590"><tspan font-family="Liberation Sans, sans-serif" font-size="353px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="2866" stroke="none" style="white-space: pre">Framework (Linux)</tspan></tspan></tspan></text>
  <text class="SVGTextShape"><tspan class="TextParagraph"><tspan class="TextPosition" x="8432" y="590"><tspan font-family="Liberation Sans, sans-serif" font-size="353px" font-weight="400" lengthAdjust="spacingAndGlyphs" textLength="2828" stroke="none" style="white-space: pre">Old PC (Windows)</tspan></tspan></tspan></text>
 </svg>
-
 Laptops also tend to be more stable when it comes to things like Wi-Fi and Bluetooth, It may be a skill-issue but every desktop I've owned has had weird issues with bluetooth, when you have a laptop there are support forms of people who have the exact same setup as you, making diagnosing issues way easier.
 e.g. Windows showing bluetooth is disabled for no reason :<
-
-
+</p>
 
 # The <span style="color: var(--color-ye)"><b>*</b></span>
 You do have to give up some GPU performance, you can make some of this back if you get video out directly from the GPU but personally this hasn't been very stable for me, I can't get it to work on Linux, and on windows if you boot with a HDMI plugged into the GPU it just boot-loops, (it works if you boot then plug in the GPU after). These issues don't exist if you just eat the 10% performance loss and get video out from the laptop, I've found this to be stable and personally the loss hasn't been noticable.
