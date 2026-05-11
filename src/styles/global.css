@@ -101,6 +101,10 @@ body {
     scrollbar-gutter: stable both-edges;
 }
 
+html {
+  background-color: #100f0f;
+}
+
 body {
     font-family: "Atkinson", sans-serif;
     margin: 0;
